@@ -96,9 +96,9 @@ const Navbar = ({
                         aria-hidden="true"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                          clip-rule="evenodd"
+                          clipRule="evenodd"
                         />
                       </svg>
                     </button>
@@ -110,7 +110,7 @@ const Navbar = ({
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="menu-button"
-                    tabindex="-1"
+                    tabIndex="-1"
                   >
                     <div className="py-1" role="none">
                       <Link href='/account'>
@@ -119,7 +119,7 @@ const Navbar = ({
                         
                         className="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
                         role="menuitem"
-                        tabindex="-1"
+                        tabIndex="-1"
                         id="menu-item-0"
                       >
                         My Account
@@ -130,7 +130,7 @@ const Navbar = ({
                         
                         className="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
                         role="menuitem"
-                        tabindex="-1"
+                        tabIndex="-1"
                         id="menu-item-2"
                       >
                         Orders
@@ -141,7 +141,7 @@ const Navbar = ({
                           
                           className="text-gray-700 block w-full text-left px-4 py-2 text-sm hover:bg-slate-100"
                           role="menuitem"
-                          tabindex="-1"
+                          tabIndex="-1"
                           id="menu-item-3"
                         >
                           Sign out
