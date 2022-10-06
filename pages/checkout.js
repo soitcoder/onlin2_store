@@ -284,7 +284,7 @@ const Checkout = ({ cart, subTotal }) => {
                 <div className="flex flex-col space-y-4">
                   {Object.keys(cart).map((k) => {
                     return (
-                      <div className="flex space-x-4">
+                      <div key={cart[k].slug} className="flex space-x-4">
                         <div>
                           <img
                             src={cart[k].img}

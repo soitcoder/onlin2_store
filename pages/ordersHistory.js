@@ -57,9 +57,9 @@ const Ordersum3 = () => {
       </div>
       {orders1.map((k) => {
         return (
-          <div className="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch  w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
+          <div key={k._id} className="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch  w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
             <div
-              key={k._id}
+             
               className="flex flex-col justify-start items-start w-full space-y-4 md:space-y-6 xl:space-y-8"
             >
               <div className="flex flex-col justify-start items-start border-4 border-slate-500 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
@@ -68,7 +68,7 @@ const Ordersum3 = () => {
                 </p>
                 {Object.keys(k.products).map((item) => {
                   return (
-                    <div className="w-full flex flex-nowrap">
+                    <div key={Math.random()} className="w-full flex flex-nowrap">
                       {" "}
                       <div className="mt-4 md:mt-6 flex  flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full ">
                         <div className="pb-4 md:pb-8 w-full md:w-40">

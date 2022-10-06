@@ -53,7 +53,7 @@ const OrdersSummary = ({ products1 }) => {
               </p>
               {Object.keys(order2).map((k) => {
                 return (
-                  <div>
+                  <div key={Math.random()}>
                     <div className="mt-4 md:mt-6 flex  flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full ">
                       <div className="pb-4 md:pb-8 w-full md:w-40">
                         <img

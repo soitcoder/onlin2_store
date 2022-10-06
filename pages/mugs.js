@@ -8,37 +8,37 @@ const Tshirt = ({products}) => {
   
   return (
     <div>
-      <section class="text-gray-600 body-font ">
-        <div class="container px-2 py-24 mx-auto ">
-          <div class="flex flex-wrap justify-center -m-4">
+      <section className="text-gray-600 body-font ">
+        <div className="container px-2 py-24 mx-auto ">
+          <div className="flex flex-wrap justify-center -m-4">
             {Object.keys(products).map((k)=>{
               return <Link key={products[k]._id} href={`/products/${products[k].slug}`} >
-              <div class="lg:w-1/5 md:w-1/2 p-8 m-2 w-full shadow-lg hover:shadow-xl cursor-pointer ">
-              <a class="block relative h-48 rounded overflow-hidden">
+              <div className="lg:w-1/5 md:w-1/2 p-8 m-2 w-full shadow-lg hover:shadow-xl cursor-pointer ">
+              <a className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="ecommerce"
-                  class="object-contain object-center w-full h-full block  "
+                  className="object-contain object-center w-full h-full block  "
                   src={products[k].img}
                 />
               </a>
-              <div class="mt-4 flex flex-col justify-center items-center">
-                <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">
+              <div className="mt-4 flex flex-col justify-center items-center">
+                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
                   {products[k].category}
                 </h3>
-                <h2 class="text-gray-900 title-font text-lg font-medium">
+                <h2 className="text-gray-900 title-font text-lg font-medium">
                   {products[k].title}
                 </h2>
-                <p class="mt-1">₹{products[k].price}</p>
+                <p className="mt-1">₹{products[k].price}</p>
                 <div className="flex justify-center ">
                 {products[k].size.map((s)=>{
-                  return <p class="mt-1 mr-4 border-2 p-1 border-gray-400">{s}</p>
+                  return <p key={Math.random()} className="mt-1 mr-4 border-2 p-1 border-gray-400">{s}</p>
                   
                 })}
                 
                 </div>
                 <div className="flex mt-4 ">
                 {products[k].color.map((c)=>{
-                  return <button className={` border-2 border-gray-500 ml-1 bg-${c.toLowerCase()}-500 rounded-full w-6 h-6 focus:outline-none `}></button>
+                  return <button key={Math.random()} className={` border-2 border-gray-500 ml-1 bg-${c.toLowerCase()}-500 rounded-full w-6 h-6 focus:outline-none `}></button>
                   
                 })}
                 
