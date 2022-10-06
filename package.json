@@ -9,12 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sentry/nextjs": "^7.8.1",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.1",
+    "js-cookie": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.6",
     "next": "12.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-cookie": "^4.1.1",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-multi-carousel": "^2.8.2",
+    "react-paypal-button-v2": "^2.6.3",
+    "react-toastify": "^9.0.8"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.7",
     "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6"
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.4"
   }
 }
