@@ -21,7 +21,7 @@ const Ordersum3 = () => {
         body: JSON.stringify({ token: Cookies.get("token") }),
       });
       let res = await response.json();
-      console.log(res);
+      // console.log(res);
       setOrders1(res.orders);
       //   console.log(res)
     };

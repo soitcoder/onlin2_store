@@ -276,8 +276,8 @@ const Post = ({ addToCart, product, varients }) => {
                   </div>
                 </div>
               </div>
-              <div classNameName="flex-col">
-                <span classNameName="title-font font-medium text-2xl text-gray-900">
+              <div className="flex-col">
+                <span className="title-font font-medium text-2xl text-gray-900">
                   ${product.price}
                 </span>
                 <button

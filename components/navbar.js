@@ -5,7 +5,7 @@ import {
   AiFillPlusCircle,
   AiFillMinusCircle,
 } from "react-icons/ai";
-import { MdAccountCircle } from "react-icons/Md";
+import { MdAccountCircle } from "react-icons/md";
 import { IoBagCheckFill } from "react-icons/io";
 import { useRef, useEffect } from "react";
 import Link from "next/link";
