@@ -7,11 +7,11 @@ import HomeCarousal from "../components/HomeCarousal";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-screen">
       <HomeCarousal />
-      <div className=" w-60 h-16"></div>
+      <div className=" w-screen h-16"></div>
       <Featured6/>
-      <div className=" w-60 h-60"></div>
+      <div className=" w-screen h-60"></div>
     </div>
   );
 }

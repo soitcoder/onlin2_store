@@ -188,7 +188,7 @@ const OrdersSummary = ({ products1 }) => {
 export default OrdersSummary;
 
 export async function getServerSideProps(context) {
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect(process.env.MONGODB_URI);
   // console.log("connected to database ")
   // const ordernum=JSON.parse(Cookies.get('orderId'))
   // console.log(ordernum)

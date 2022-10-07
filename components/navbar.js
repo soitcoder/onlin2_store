@@ -167,7 +167,7 @@ const Navbar = ({
 
       <div
         ref={ref1}
-        className="sidecart absolute z-10 h-full top-0  right-0 bg-slate-600 p-10 pr-20 transform transition-transform translate-x-full  "
+        className="sidecart absolute z-10 h-full top-0  right-0  bg-slate-600 p-10 pr-20 transform transition-transform translate-x-full "
       >
         <div className=" text-xl font-bold ">shopping cart </div>
         <div onClick={toggleCart}>

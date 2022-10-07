@@ -375,7 +375,7 @@ const Post = ({ addToCart, product, varients }) => {
 export default Post;
 
 export async function getServerSideProps(context) {
-  await mongoose.connect(process.env.MONGO_URI);
+  await mongoose.connect(process.env.MONGODB_URI);
 
   // let str1=context.query.slug
   // for(i=0;i<str1.length;i++){

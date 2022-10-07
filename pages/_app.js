@@ -100,13 +100,13 @@ function MyApp({ Component, pageProps }) {
   }
  
   return (
-    <>
+    <div className="w-screen">
       {/* {showHeader && <Navbar cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} />} */}
       <Navbar Logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} />
       <Component cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} {...pageProps} />
       {/* {showFooter && <Footer/>} */}
       <Footer/>
-    </>
+    </div>
   );
 }
 
