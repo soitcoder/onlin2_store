@@ -60,7 +60,7 @@ export default Tshirt;
 
 
 export async function getServerSideProps(context) {
-  await mongoose.connect(process.env.MONGODB_URI)
+  await mongoose.connect(process.env.MONGODB_URL)
   // console.log("connected to database ")
 
   let products= await Product.find({category:"mugs"})
