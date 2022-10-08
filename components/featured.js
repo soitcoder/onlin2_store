@@ -17,7 +17,7 @@ const Feature6 = () => {
           <button
             aria-label="view catalogue"
             className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-700 focus:outline-none mt-6 md:mt-8 text-base font-semibold leading-none text-gray-800 flex items-center hover:underline"
-          ><Link href={'http://localhost:3000/tshirts'}>
+          ><Link href={'/tshirts'}>
             View Catalogue
             </Link>
             <svg
