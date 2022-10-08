@@ -13,7 +13,7 @@ const Ordersum3 = () => {
   const [orders1, setOrders1] = useState([]);
   useEffect(() => {
     const fetchOrders = async () => {
-      let response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/orders`, {
+      let response = await fetch(`/api/orders`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",

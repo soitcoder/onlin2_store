@@ -59,7 +59,7 @@ const Checkout = ({ cart, subTotal }) => {
     let pay_status=pay_status1
     const data = { email,id,products,address,subTotal,pay_status };
     console.log(data);
-    let res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/myOrder`, {
+    let res = await fetch(`/api/myOrder`, {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const Checkout = ({ cart, subTotal }) => {
 
    const changePage=(e)=>{
       if(e){
-        router.push(`${process.env.NEXT_PUBLIC_HOST}/ordersSummary`)
+        router.push(`/ordersSummary`)
       }
    }
 

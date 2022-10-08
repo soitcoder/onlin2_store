@@ -30,7 +30,7 @@ const Post = ({ addToCart, product, varients }) => {
   };
 
   const checkServicebility = async () => {
-    const pins = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`)
+    const pins = await fetch(`/api/pincode`)
     const pinsJson = await pins.json();
     console.log(pinsJson);
     if (pinsJson.includes(parseInt(pin))) {
@@ -57,7 +57,7 @@ const Post = ({ addToCart, product, varients }) => {
     // console.log(newSize)
     // let t=product.title
     // let u=t+'-'+newSize+'-'+newSize
-    let url=`${process.env.NEXT_PUBLIC_HOST}/products/${varients[newColor][newSize]['slug']}`
+    let url=`/products/${varients[newColor][newSize]['slug']}`
     router.push(url)
   }
 
@@ -316,7 +316,7 @@ const Post = ({ addToCart, product, varients }) => {
                   className="flex mt-6 text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-700 rounded"
                 >
                   Buy Now
-                </button></Link>: <Link href={`${process.env.NEXT_PUBLIC_HOST}/signup`}><button
+                </button></Link>: <Link href={`/signup`}><button
                   
                   className="flex mt-6 text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-700 rounded"
                 >
