@@ -98,7 +98,7 @@ const Ordersum3 = () => {
                     <h1>price : ${getprice(k)}</h1> */}
                             </div>
                           </div>
-                          <div className=" flex">
+                          <div className="flex flex-col sm:flex-row ">
                             <button className=" mb-5 text-xl bg-transparent w-52 h-20 hover:bg-slate-500 text-slate-700 font-semibold hover:text-white py-2 px-4 border border-slate-500 hover:border-transparent rounded">
                               <Link href="/">Track your Order</Link>
                             </button>

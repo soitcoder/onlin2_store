@@ -22,7 +22,7 @@ const Navbar = ({
   subTotal,
 }) => {
   const ref1 = useRef();
-  const ref2=useRef();
+  const ref2 = useRef();
   // console.log(cart, addToCart, removeFromCart, clearCart, subTotal);
   // console.log(cart)
 
@@ -36,19 +36,18 @@ const Navbar = ({
     }
   };
 
-  const dropDown=()=>{
-    if(ref2.current.classList.contains("hidden")){
-      ref2.current.classList.remove("hidden")
+  const dropDown = () => {
+    if (ref2.current.classList.contains("hidden")) {
+      ref2.current.classList.remove("hidden");
+    } else {
+      ref2.current.classList.add("hidden");
     }
-    else{
-      ref2.current.classList.add("hidden")
-    }
-  }
+  };
 
   return (
-    <div>
+    <div >
       <header className="text-gray-400  body-font shadow-md ">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center  ">
+        <div className="container  mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center  ">
           <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0 cursor-pointer">
             <img
               src="https://img.icons8.com/plasticine/344/lazada.png"
@@ -87,7 +86,7 @@ const Navbar = ({
                       aria-expanded="true"
                       aria-haspopup="true"
                     >
-                      <MdAccountCircle className="text-lg"/>
+                      <MdAccountCircle className="text-lg" />
                       <svg
                         className="-mr-1 ml-2 h-5 w-5"
                         xmlns="http://www.w3.org/2000/svg"
@@ -105,48 +104,43 @@ const Navbar = ({
                   </div>
 
                   <div
-                    ref ={ref2}
-                    className=" hidden z-10 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    ref={ref2}
+                    className=" hidden z-20 origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                     role="menu"
                     aria-orientation="vertical"
                     aria-labelledby="menu-button"
                     tabIndex="-1"
                   >
                     <div className="py-1" role="none">
-                      <Link href='/account'>
-                      <a
-                        
-                        
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
-                        role="menuitem"
-                        tabIndex="-1"
-                        id="menu-item-0"
-                      >
-                        My Account
-                      </a>
-                      </Link>
-                      <Link href='/ordersHistory'>
-                      <a
-                        
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
-                        role="menuitem"
-                        tabIndex="-1"
-                        id="menu-item-2"
-                      >
-                        Orders
-                      </a>
-                      </Link>
-                        <button
-                          onClick={Logout}
-                          
-                          className="text-gray-700 block w-full text-left px-4 py-2 text-sm hover:bg-slate-100"
+                      <Link href="/account">
+                        <a
+                          className="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
                           role="menuitem"
                           tabIndex="-1"
-                          id="menu-item-3"
+                          id="menu-item-0"
                         >
-                          Sign out
-                        </button>
-                      
+                          My Account
+                        </a>
+                      </Link>
+                      <Link href="/ordersHistory">
+                        <a
+                          className="text-gray-700 block px-4 py-2 text-sm hover:bg-slate-100"
+                          role="menuitem"
+                          tabIndex="-1"
+                          id="menu-item-2"
+                        >
+                          Orders
+                        </a>
+                      </Link>
+                      <button
+                        onClick={Logout}
+                        className="text-gray-700 block w-full text-left px-4 py-2 text-sm hover:bg-slate-100"
+                        role="menuitem"
+                        tabIndex="-1"
+                        id="menu-item-3"
+                      >
+                        Sign out
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -164,86 +158,93 @@ const Navbar = ({
           </nav>
         </div>
       </header>
-
-      <div
-        ref={ref1}
-        className="sidecart absolute z-10 h-full top-0  right-0  bg-slate-600 p-10 pr-20 transform transition-transform translate-x-full "
-      >
-        <div className=" text-xl font-bold ">shopping cart </div>
-        <div onClick={toggleCart}>
-          <AiFillCloseCircle className="absolute top-6 right-6 text-xl cursor-pointer" />
-        </div>
-        <ol className="pt-3 list-decimal ">
-          {Object.keys(cart).length == 0 && (
-            <div className="">No items in the cart</div>
-          )}
-          {Object.keys(cart).map((k) => {
-            return (
-              <li key={k}>
-                <div className="flex">
-                  <div className="mr-12">
-                    <span className="mr-4">{cart[k].name}</span>
-                    <span className="mr-4">
-                      ({cart[k].varient},{cart[k].size})
-                    </span>
+      {/* <div className="absolute top-0 right-0"> */}
+        <div
+          ref={ref1}
+          className="sidecart  h-full absolute top-0 right-0  bg-slate-600 z-10 p-10 pr-20 transform transition-transform translate-x-full "
+        >
+          <div className=" text-xl font-bold ">shopping cart </div>
+          <div onClick={toggleCart}>
+            <AiFillCloseCircle className="absolute top-6 right-6 text-xl cursor-pointer" />
+          </div>
+          <ol className="pt-3 list-decimal ">
+            {Object.keys(cart).length == 0 && (
+              <div className="">No items in the cart</div>
+            )}
+            {Object.keys(cart).map((k) => {
+              return (
+                <li key={k}>
+                  <div className="flex">
+                    <div className="mr-12">
+                      <span className="mr-4">{cart[k].name}</span>
+                      <span className="mr-4">
+                        ({cart[k].varient},{cart[k].size})
+                      </span>
+                    </div>
+                    <div className="flex justify-center items-center space-x-4">
+                      <span className="cursor-pointer">
+                        <AiFillPlusCircle
+                          onClick={() => {
+                            addToCart(
+                              k,
+                              1,
+                              cart[k].price,
+                              cart[k].name,
+                              cart[k].size,
+                              cart[k].varient
+                            );
+                          }}
+                        />
+                      </span>
+                      <span>{cart[k].qty}</span>
+                      <span className="cursor-pointer">
+                        <AiFillMinusCircle
+                          onClick={() => {
+                            removeFromCart(
+                              k,
+                              1,
+                              cart[k].price,
+                              cart[k].name,
+                              cart[k].size,
+                              cart[k].varient
+                            );
+                          }}
+                        />
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex justify-center items-center space-x-4">
-                    <span className="cursor-pointer">
-                      <AiFillPlusCircle
-                        onClick={() => {
-                          addToCart(
-                            k,
-                            1,
-                            cart[k].price,
-                            cart[k].name,
-                            cart[k].size,
-                            cart[k].varient
-                          );
-                        }}
-                      />
-                    </span>
-                    <span>{cart[k].qty}</span>
-                    <span className="cursor-pointer">
-                      <AiFillMinusCircle
-                        onClick={() => {
-                          removeFromCart(
-                            k,
-                            1,
-                            cart[k].price,
-                            cart[k].name,
-                            cart[k].size,
-                            cart[k].varient
-                          );
-                        }}
-                      />
-                    </span>
-                  </div>
-                </div>
-              </li> 
-            );
-          })}
-        </ol>
-        
+                </li>
+              );
+            })}
+          </ol>
 
-        <div className="flex">
-          {/* <Link href={"/checkout"}>
+          <div className="flex">
+            {/* <Link href={"/checkout"}>
            <button class="flex mt-6 mr-3 text-white bg-black border-0 py-2 px-6 focus:outline-none rounded">checkout</button>
               </Link> */}
-          {Cookies.get("token") ? <Link href={"/checkout"}>
-           <button className="flex mt-6 mr-3 text-white bg-black border-0 py-2 px-6 focus:outline-none rounded">checkout</button>
+            {Cookies.get("token") ? (
+              <Link href={"/checkout"}>
+                <button className="flex mt-6 mr-3 text-white bg-black border-0 py-2 px-6 focus:outline-none rounded">
+                  checkout
+                </button>
               </Link>
-            :<Link href={"/signup"}><button className="flex mt-6 mr-3 text-white bg-black border-0 py-2 px-6 focus:outline-none rounded">checkout</button>
-             </Link> 
-          }
-          <button
-            onClick={clearCart}
-            className="flex mt-6 text-white bg-black border-0 py-2 px-6 focus:outline-none rounded"
-          >
-            Clear Cart
-          </button>
+            ) : (
+              <Link href={"/signup"}>
+                <button className="flex mt-6 mr-3 text-white bg-black border-0 py-2 px-6 focus:outline-none rounded">
+                  checkout
+                </button>
+              </Link>
+            )}
+            <button
+              onClick={clearCart}
+              className="flex mt-6 text-white bg-black border-0 py-2 px-6 focus:outline-none rounded"
+            >
+              Clear Cart
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 
